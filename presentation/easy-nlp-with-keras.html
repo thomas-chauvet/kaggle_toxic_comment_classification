@@ -22,7 +22,7 @@
 
 class: center, middle
 
-# Natural Language Processing (NLP) et Deep Learning
+# Natural Language Processing (NLP) and Deep Learning
 
 ## A simple introduction with Keras
 
@@ -37,21 +37,21 @@ class: center, middle
 
 ---
 
-## Toxic comments classification: a kaggle challenge
+## Toxic comments classification: a Kaggle challenge
 
 The objective is to **detect different categories of "toxic" comments** on Wikipedia forums.
 
-- just under 100,000 comments on the train.
+- just under 100,000 comments on the train set.
 - no metadata: only plain text.
-- **6 classes to predict**: "toxic", "severely toxic", "threat", "obscene", "insults" and "identity hate".
+- **6 labels to predict**: "toxic", "severely toxic", "threat", "obscene", "insults" and "identity hate".
 
 .center[![proportion_each_label](proportion_each_label.png "proportion_each_label")]
 
 ---
 
-# A multi-labels classification problem
+# A multi-label classification problem
 
-- Multi-labels classification problem: *less classic than multi-class classification problem*.
+- Multi-label classification problem: *less classic than multi-class classification problem*.
 
 - Each comment can **belong to one or more target classes**. 
 
@@ -63,19 +63,19 @@ The objective is to **detect different categories of "toxic" comments** on Wikip
 
 ---
 
-# Text pre-processing: tokenisation
+# Text pre-processing: tokenization
 
 Use **tokenization** to manipulate text with Keras.
 
-Transform text into sequences, in order to have **list of word indexes**.
+Transform text into sequences, in order to have an **indexed list of words**.
 
 **Example**
 
-*"This is a sentence.»*
+*"This is a sentence."*
 
 Becomes a list of tokens: `["This","is","a","sentence"]`.
 
-Then becomes an index list: `[1, 2, 3, 4]`.
+Then becomes an indexed list: `[1, 2, 3, 4]`.
 
 Keras code:
 ```python
@@ -104,7 +104,7 @@ Weight *TF* in order to give more importance to less frequent words.
 .center[![tfidf](tfidf.png "tfidf")]
 
 
-#### .center[But we have extremely sparse matrix with huge dimension]
+#### .center[But we have an extremely sparse matrix with huge dimension]
 
 ---
 
@@ -140,7 +140,7 @@ class: split-30
 
 ---
 
-# A first simple neural networks
+# A first simple neural network
 
 ```python
 max_features=2000; embedding_size = 50; maxlen=100;
@@ -162,7 +162,7 @@ model.fit(
 ```
 
 - max_features : size of the vocabulary.
-- max_len : number of words in the sequence/setence (could be padded or truncated).
+- max_len : number of words in the sequence/sentence (could be padded or truncated).
 
 #### .center[As easy as 1, 2, 3!]
 
@@ -170,7 +170,7 @@ model.fit(
 
 class: split-60
 
-# A first simple neural networks: without pre-trained embedding
+# A first simple neural network: without pre-trained embedding
 
 .column[
 .center[![nn_without_pretrained_embedding](nn_without_pretrained_embedding.png "nn_without_pretrained_embedding")].caption[*Simple neural network dimensions and layers.*]
@@ -188,7 +188,7 @@ Few remarks:
 
 ---
 
-# A first simple neural networks: with pre-trained embedding
+# A first simple neural network: with pre-trained embedding
 
 ```python
 # Define model
@@ -203,7 +203,7 @@ model.add(Dense(6, activation='sigmoid'))
 
 We add `embedding_matrix` as `weights` parameters. It represents words from vocabulary in our documents in pre-trained matrix (like Glove, word2vec, etc).
 
-**Embedding matrix** : matrix of size *(vocabulary size) x (embedding size)*. Each row in the matrix is a word projection on the embeeding.
+**Embedding matrix** : matrix of size *(vocabulary size) x (embedding size)*. Each row in the matrix is a word projection on the embedding.
 
 ---
 
@@ -301,7 +301,7 @@ model.add(Dense(6, activation='sigmoid'))
 
 - `logloss` with a simple neural network **`0.0692`** vs. with a RNN **`0.0662`**.
 
-- A little bit better, but could we achive a lower `logloss` ?
+- A little bit better, but could we achieve a lower `logloss` ?
 
 ---
 
@@ -342,7 +342,7 @@ model.add(Dense(6, activation='sigmoid')
 
 - Still easy as 1, 2, 3!
 
-- And we achive a much better score on `logloss`: **0,0497** vs. **0,0662** with RNN.
+- And we achieve a much better score on `logloss`: **0,0497** vs. **0,0662** with RNN.
 
 ---
 
@@ -350,7 +350,7 @@ class: split-60
 
 # Bi-directional LSTM
 
-- The sequences are processed from left to right (as if we read the sentence). 
+- The sequences are processed from left to right (as if we read a sentence). 
 
 - The sequences could be processed from left to right **AND** right to left.
 
@@ -389,7 +389,7 @@ model.add(Dense(6, activation='sigmoid'))
 
 - `logloss` has been a little bit improved: **0,0497** vs. **0,0494**.
 
-- But, we do not tune our algorithm, and no complex parameters tuning.
+- But, we do not tune our algorithm, and there is no complex parameters tuning.
 
 ---
 
@@ -409,7 +409,7 @@ The theory can be a little complex (*hello LSTM*)....
 
 ---
 
-# Go further with neural network and Keras
+# Go further with neural networks and Keras
 
 - Add regularization:
     * Dropout,
@@ -423,11 +423,11 @@ The theory can be a little complex (*hello LSTM*)....
 
 - Combine Convolutional Neural Network (CNN) with Reccurent Neural Network (RNN): useful for processing long sequences.
 
-- Add what an "attention" process: [https://distill.pub/2016/augmented-rnns/](https://distill.pub/2016/augmented-rnns/).
+- Add an "attention" mechanism: [https://distill.pub/2016/augmented-rnns/](https://distill.pub/2016/augmented-rnns/).
 
 ---
 
-# Resources
+# Ressources
 
 - [Keras](https://keras.io/)
 
