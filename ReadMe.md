@@ -1,10 +1,12 @@
 **Warning: The dataset contains a lot of dirty words, insult, etc. Please, consider it before cheking notebooks.**
 
+## Slides
+
+Notebooks were created in order to make a presentation about NLP and Keras, to show "how easy" it could be to create neural network for NLP problems with Keras. You can find slides [here](https://thomas-chauvet.github.io/kaggle_toxic_comment_classification/presentation/easy-nlp-with-keras.html#1).
+
 ## Notebooks to dive into NLP
 
 Notebooks to understand Natural Language Processing (NLP) with python. We use data from [Kaggle Challenge](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge) to find toxic comment in Wikipedia forum.
-
-Notebooks were created in order to make a presentation about NLP and Keras, to show "how easy" it could be to create neural network for NLP problems. I will consider upload the presentation (in french...).
 
 Notebooks are splitted into 5 parts:
 
