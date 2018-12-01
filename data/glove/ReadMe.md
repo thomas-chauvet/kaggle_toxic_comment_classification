@@ -1,0 +1,1 @@
+Please download glove embedding on: [https://nlp.stanford.edu/projects/glove/](https://nlp.stanford.edu/projects/glove/). In notebooks, we use `glove.6B.50d.txt` embedding for computation reasons. Do not hesitate to use bigger glove embeddings, or other embeddings.

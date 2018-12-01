@@ -1,0 +1,1 @@
+Please download input data from Kaggle: [https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge). 
