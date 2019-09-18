@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
     <title>NLP & Deep Learning</title>
     <link rel="stylesheet" type="text/css" href="custom.css">
     <meta charset="utf-8">
@@ -34,6 +36,80 @@ class: center, middle
 .right[Data Scientist]
 .right[Twitter: [@ChauvetThomas](https://twitter.com/ChauvetThomas)]
 .right[Linkedin: [in/thomaschauvet/](https://www.linkedin.com/in/thomaschauvet/en/)]
+
+---
+
+class: split-50
+
+## First things first, what is Machine Learning ?
+
+.center[**Learn representation from the data.**]
+
+With ML, we give data to a program and it will learn a model from them to predict an output.
+
+Based on: Mathematics, Statistics and Computer Science.
+
+Mainly two kind of ML: supervised and unsupervised.
+
+.column[
+ **Supervised**
+
+ Model a target known in advance:
+ - discrete target -> classification
+ - continuous target -> regression
+]
+
+.column[
+<br>
+**Unsupervised**
+
+Determine groups or "clusters" of data (of individuals, objects, images,...) defined by the algorithm without *a priori*.
+]
+
+<br>
+<br>
+*Note: Unsupervised learning is often called clustering*.
+
+---
+
+## What is Deep Learning ?
+
+---
+
+## What is NLP ?
+
+NLP stands for **Natural Language Processing**.
+
+Intersection of different fields: Machine learning and Linguistic mainly.
+
+<img src="nlp_ai_ml_dl.png" width="800">
+
+.center[Interdisciplinary field focus onthe interactions between computers and human natural languages.]
+
+---
+
+## Wich use cases for NLP?
+
+NLP is everywhere around us:
+
+
+<ul class="fa-ul">
+  <li><i class="fa-li fas fa-envelope-open-text"></i>Mail: detect spam,</li>
+  <li><i class="fa-li fas fa-language"></i>Translation: Google Translate, DeepL,</li>
+  <li><i class="fa-li fas fa-hands-helping"></i>Personal assistants: Siri, Alexa, Google, etc,</li>
+  <li><i class="fa-li fas fa-search"></i>Search: Google Search, website search.</li>
+  <li>Etc.</li>
+</ul> 
+
+It also helps text analysis:
+
+<ul class="fa-ul">
+  <li><i class="fa-li fas fa-chart-line"></i>Sentiment analysis</li>
+  <li><i class="fa-li fas fa-text-height"></i>Text summary</li>
+  <li><i class="fa-li fas fa-key"></i>Keyword extraction,</li>
+  <li><i class="fa-li fas fa-users"></i>Name entity recognition</li>
+  <li>Etc.</li>
+</ul>
 
 ---
 
@@ -446,8 +522,12 @@ The theory can be a little complex (*hello LSTM*)....
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
+      remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
       var slideshow = remark.create({
-        ratio: '16:9', 
+        ratio: '4:3', 
         highlightLanguage: 'python',
         highlightStyle: 'railscasts'
       });
